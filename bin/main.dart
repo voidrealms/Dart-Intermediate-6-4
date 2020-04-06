@@ -15,7 +15,7 @@ main(List<String> arguments) {
 void writeFile(File file) {
   //Append, Write
 
-  RandomAccessFile raf = file.openSync(mode: FileMode.WRITE);
+  RandomAccessFile raf = file.openSync(mode: FileMode.write);
   raf.writeStringSync('Hello World!\r\nHow are you today?');
   raf.flushSync();
   raf.closeSync();
